@@ -18,7 +18,8 @@ class SendEmailController extends Controller
      $this->validate($request, [
       'name'     =>  'required',
       'email'  =>  'required|email',
-      'message' =>  'required'
+      'message' =>  'required',
+       'tmail' =>  'required|email'
      ]);
 
         $data = array(
@@ -26,6 +27,7 @@ class SendEmailController extends Controller
             'message'   =>   $request->message
         );
 
+      $to = $request->tmail;
      Mail::to('chrisribia@gmail.com')->send(new SendMail($data));
      return back()->with('success', 'Thanks for contacting us!');
 
