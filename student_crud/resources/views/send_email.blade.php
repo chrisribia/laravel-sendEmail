@@ -46,6 +46,12 @@
      <label>Enter Your Name</label>
      <input type="text" name="name" class="form-control" value="" />
     </div>
+    
+    <div class="form-group">
+     <label>Enter Recipients Email</label>
+     <input type="text" name="tmail" class="form-control" value="" />
+    </div>
+    
     <div class="form-group">
      <label>Enter Your Email</label>
      <input type="text" name="email" class="form-control" value="" />
